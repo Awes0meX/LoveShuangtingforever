@@ -2,24 +2,14 @@
 <html lang="zh">
 <head>
     <meta charset="UTF-8">
-    <meta content="width=device-width,user-scalable=no" name="viewport">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Love between Us</title>
     <link rel="stylesheet" href="./css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="./css/main.css">
 </head>
 
 <body>
-    <audio id="Jaudio" class="media-audio" src="./music.mp3" preload loop="loop"></audio >
-    <script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script> 
-<script> 
-     //一般情况下，这样就可以自动播放了，但是一些奇葩iPhone机不可以 
-     document.getElementById('idName').play(); 
-    //微信必须加入Weixin JSAPI的WeixinJSBridgeReady才能生效 
-    document.addEventListener("WeixinJSBridgeReady", function () { 
-        document.getElementById('idName').play(); 
-        document.getElementById('video').play(); //视频自动播放
-    }, false); 
-</script>
+    <audio src="./music.mp3" autoplay="true" loop="loop"></audio>
     <div id="back">
         <div class="mask"></div>
         <!-- 设置展示的图片，github pages不能有后台程序只能一条一条手动添加了 囧 -->
