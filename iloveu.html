@@ -10,6 +10,18 @@
 
 <body>
     <audio src="./music.mp3" autoplay="true" loop="loop"></audio>
+    <script>
+    function audioAutoPlay(id){
+	var audio = document.getElementById(id);
+	audio.play();
+    document.addEventListener("WeixinJSBridgeReady", function () {
+            audio.play();
+    }, false);
+    document.addEventListener('YixinJSBridgeReady', function() {
+    	audio.play();
+    }, false);
+    }
+    audioAutoPlay('Jaudio');
     <div id="back">
         <div class="mask"></div>
         <!-- 设置展示的图片，github pages不能有后台程序只能一条一条手动添加了 囧 -->
