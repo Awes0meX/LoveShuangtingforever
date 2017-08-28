@@ -10,8 +10,8 @@
 
 <body>
     <audio id="Jaudio" class="media-audio" src="./music.mp3" preload loop="loop"></audio >
-//--创建页面监听，等待微信端页面加载完毕 触发音频播放
-document.addEventListener('DOMContentLoaded', function () {
+    //--创建页面监听，等待微信端页面加载完毕 触发音频播放
+    document.addEventListener('DOMContentLoaded', function () {
     function audioAutoPlay() {
         var audio = document.getElementById('audio');
             audio.play();
@@ -20,15 +20,15 @@ document.addEventListener('DOMContentLoaded', function () {
         }, false);
     }
     audioAutoPlay();
-});
-//--创建触摸监听，当浏览器打开页面时，触摸屏幕触发事件，进行音频播放
-document.addEventListener('touchstart', function () {
+    });
+    //--创建触摸监听，当浏览器打开页面时，触摸屏幕触发事件，进行音频播放
+    document.addEventListener('touchstart', function () {
     function audioAutoPlay() {
         var audio = document.getElementById('audio');
             audio.play();
     }
     audioAutoPlay();
-});
+    });
     <div id="back">
         <div class="mask"></div>
         <!-- 设置展示的图片，github pages不能有后台程序只能一条一条手动添加了 囧 -->
