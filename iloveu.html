@@ -9,7 +9,24 @@
 </head>
 
 <body>
-    <audio src="./music.mp3" autoplay="true" loop="loop"></audio>
+    <audio id="Jaudio" class="media-audio" src="./music.mp3" preload loop="loop"></audio >
+function audioAutoPlay(id){
+    var audio = document.getElementById(id),
+        play = function(){
+        audio.play();
+        document.removeEventListener("touchstart",play, false);
+    };
+    audio.play();
+    document.addEventListener("WeixinJSBridgeReady", function () {//微信
+       play();
+    }, false);
+    document.addEventListener(‘YixinJSBridgeReady‘, function() {//易信
+              play();
+        }, false);
+    document.addEventListener("touchstart",play, false);
+}
+audioAutoPlay(‘Jaudio‘);
+
     <div id="back">
         <div class="mask"></div>
         <!-- 设置展示的图片，github pages不能有后台程序只能一条一条手动添加了 囧 -->
